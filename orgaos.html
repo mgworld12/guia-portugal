@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Órgãos públicos — Guia de Portugal</title>
+<meta name="description" content="Guia geral sobre Portugal para turismo e vida prática.">
+<meta name="theme-color" content="#1b3f8b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="interna">
+<header class="top"><a class="brand" href="index.html"><img class="logo" src="img/logo-192.webp" srcset="img/logo-96.webp 96w, img/logo-192.webp 192w, img/logo-360.webp 360w" sizes="40px" alt="" width="33" height="29" style="height:1.15em;width:auto"><span>Guia de Portugal</span></a><button id="tema" aria-label="Alternar tema claro/escuro">◐</button></header>
+<main class="conteudo">
+  <p><a class="voltar" href="index.html">← Início</a></p>
+  <h2>Órgãos públicos de Portugal</h2>
+  <label class="filtro"><span class="sr">Filtrar órgãos</span><input id="f" type="search" placeholder="Filtrar: AIMA, polícia, impostos…" autocomplete="off"></label>
+  <div id="org"></div>
+  <div id="tip" role="tooltip"></div>
+  <p id="vazio" hidden>Nenhum órgão encontrado.</p>
+</main>
+<footer><p>Guia independente, sem vínculo com o governo. Confirme sempre os dados nos sites oficiais antes de decidir.</p></footer>
+<script src="common.js"></script>
+<script src="orgaos.js"></script>
+</body>
+</html>
