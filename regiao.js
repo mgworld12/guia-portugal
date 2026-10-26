@@ -15,7 +15,9 @@ $("#camadas").innerHTML=CAM.map(([k,n])=>`<button type="button" class="cat-btn" 
 let mode="distritos",sel=null,map=null,polys=null,mk=null;
 const temMapa=typeof L!=="undefined";
 if(temMapa){map=L.map("mapar",{scrollWheelZoom:false}).setView(R.view,R.zoom);
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{maxZoom:18,subdomains:"abcd",attribution:"© OpenStreetMap © CARTO | Limites: CAOP/DGT (CC BY 4.0)"}).addTo(map);mk=L.layerGroup().addTo(map)}
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",{maxZoom:16,maxNativeZoom:16,attribution:"Tiles © Esri — Esri, HERE, Garmin, © OpenStreetMap contributors | Limites: CAOP/DGT (CC BY 4.0)"}).addTo(map);
+map.createPane("rotulos");const pr=map.getPane("rotulos");pr.style.zIndex=450;pr.style.pointerEvents="none";
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{pane:"rotulos",maxZoom:16,maxNativeZoom:16}).addTo(map);mk=L.layerGroup().addTo(map)}
 else $("#mapar").innerHTML="<p class='nd' style='padding:1rem'>O mapa não carregou. Confira se a pasta <b>lib</b> (com leaflet.js e leaflet.css) foi enviada ao repositório. As listas e os quadros abaixo continuam funcionando.</p>";
 const on=(t,id)=>sel&&sel.t===t&&sel.id===id;
 const cidConc=()=>sel&&sel.t==="cid"?CID[sel.id].c:null;
