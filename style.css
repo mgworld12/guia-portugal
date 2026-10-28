@@ -217,3 +217,8 @@ a.logo-b:hover,a.logo-b:focus-visible{transform:scale(1.12) rotate(-6deg)}
 
 #info{overflow:auto}
 .chip-f{border:1px solid var(--br);border-radius:6px;padding:.1rem .5rem;font-size:.8rem;background:var(--bg)}
+
+#info{display:flex;flex-direction:column}
+.rod-info{margin-top:auto;padding-top:.6rem}
+.sb.on,.pill.on{font-weight:400}
+.sb.on{background:#d8f3dc;border-color:#2d6a4f;color:#1b4332}
