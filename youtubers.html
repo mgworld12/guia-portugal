@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTubers e influencers — Guia de Portugal</title>
+<meta name="theme-color" content="#2d6a4f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="stylesheet" href="lib/leaflet.css">
+<link rel="stylesheet" href="lib/MarkerCluster.css">
+<link rel="stylesheet" href="style.css?v=20">
+</head>
+<body class="interna">
+<header class="cab">
+  <a class="cab-voltar" href="index.html" data-voltar>← Voltar</a>
+  <button class="cab-tema" id="tema" aria-label="Alternar tema claro/escuro">◐</button>
+  <h1>YouTubers e influencers em Portugal</h1>
+  <div class="header-categories" id="regioes"></div>
+</header>
+<main class="container">
+  <div id="mapar"></div>
+  <p class="nota-mapa">Cada pino mostra a cidade ou o distrito do canal; a posição é aproximada. Passe o mouse (ou toque) num pino para ver o canal.</p>
+  <div class="yt-barra"><label class="busca-l"><span class="sr">Procurar canal</span><input id="busca" type="search" placeholder="Procurar canal ou cidade…" autocomplete="off"></label><span id="cont" class="cont"></span></div>
+  <div id="lista" class="yt-lista"></div>
+</main>
+<footer class="rodape"><p>&copy; 2026 Guia de Portugal. Guia independente, sem vínculo com os canais citados; os links levam às páginas públicas de cada um.</p><p class="cred">Limites: CAOP/DGT (CC BY 4.0) · Mapa: Esri, HERE, Garmin, © OpenStreetMap contributors · Ícones: favicons dos próprios sites</p></footer>
+<script src="lib/leaflet.js"></script>
+<script>window.L||document.write('<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><\/script>')</script>
+<script src="lib/leaflet.markercluster.js"></script>
+<script src="common.js?v=20"></script>
+<script src="youtubers-dados.js?v=20"></script>
+<script src="youtubers-mapa.js?v=20"></script>
+<script src="youtubers.js?v=20"></script>
+<script src="bonde-voltar.js"></script>
+</body>
+</html>
